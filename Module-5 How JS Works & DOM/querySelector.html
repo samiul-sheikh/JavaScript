@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector</title>
+    <style>
+        article {
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 15px;
+            padding: 5px;
+        }
+
+        .special h3 {}
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <article>
+                <h3>article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem soluta blanditiis
+                    corporis vero facilis vel, atque harum repudiandae? Atque officia, nisi alias ipsa aperiam
+                    accusantium laboriosam quasi? Velit, quaerat dolore.</p>
+            </article>
+            <article class="special">
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Maiores fuga quisquam iure voluptas. Iure ipsa, earum, sed mollitia totam ex modi
+                    laudantium quasi reprehenderit eum dignissimos. Commodi facere tempora, animi voluptates totam
+                    necessitatibus accusantium obcaecati ut iusto impedit!</p>
+            </article>
+            <article class="special">
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Aperiam iure eaque natus rem laborum a autem perferendis numquam voluptates,
+                    mollitia minima nisi pariatur libero atque unde nobis recusandae in itaque, quae quia enim. Sint
+                    sequi praesentium distinctio architecto.</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        var authors = document.querySelectorAll(".special h3");
+        for (var i = 0; i < authors.length; i++) {
+            var element = authors[i];
+            // console.log(element);
+            // for show inner class html
+            // console.log(element.innerHTML);
+            // for change inner html text
+            element.innerHTML = "writer " + (i + 1);
+            element.style.color = "white";
+            element.style.backgroundColor = "blue";
+            element.style.margin = "5px";
+        }
+    </script>
+</body>
+
+</html>
