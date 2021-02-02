@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElement</title>
+    <style>
+        article {
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 15px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <article id="first-article">
+                <h3>article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem soluta blanditiis
+                    corporis vero facilis vel, atque harum repudiandae? Atque officia, nisi alias ipsa aperiam
+                    accusantium laboriosam quasi? Velit, quaerat dolore.</p>
+            </article>
+            <article>
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Maiores fuga quisquam iure voluptas. Iure ipsa, earum, sed mollitia totam ex modi
+                    laudantium quasi reprehenderit eum dignissimos. Commodi facere tempora, animi voluptates totam
+                    necessitatibus accusantium obcaecati ut iusto impedit!</p>
+            </article>
+            <article>
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Aperiam iure eaque natus rem laborum a autem perferendis numquam voluptates,
+                    mollitia minima nisi pariatur libero atque unde nobis recusandae in itaque, quae quia enim. Sint
+                    sequi praesentium distinctio architecto.</p>
+            </article>
+
+            <article>
+                <h3>Grocery List</h3>
+                <ul id="gift-list">
+                    <li>gift item - 1</li>
+                    <li>gift item - 2</li>
+                    <li>gift item - 3</li>
+                    <li>gift item - 4</li>
+                    <li>gift item - 5</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <script>
+        // adding new text via javascript in article tag
+        const article = document.getElementById("first-article");
+        const newParagraph = document.createElement("p");
+        newParagraph.innerHTML = "This is added by JS";
+        article.appendChild(newParagraph);
+
+        // add more gift item
+        const ul = document.getElementById("gift-list");
+        const li = document.createElement("li");
+        li.innerHTML = "Brand new gift";
+        ul.appendChild(li);
+
+    </script>
+</body>
+
+</html>
