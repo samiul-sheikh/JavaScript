@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+</head>
+
+<body>
+    <h1 onmousemove="someoneMove()">Exploring Event</h1>
+    <button onclick="handleClick()">Click Me</button>
+    <script>
+        function someoneMove() {
+            console.log(new Date);
+        }
+        function handleClick() {
+            console.log("someone clicked me");
+        }
+    </script>
+</body>
+
+</html>
